@@ -65,7 +65,7 @@ public class ReadIn {
    // PUT THE FIELDS here as local variables set to null
    String name = null;
    LocalDate dueDate = null;
-   int classNum = null;
+   int classNum = 0;
    String notes = null;
    
    //Open the file
