@@ -1,40 +1,60 @@
-//Date,Subject,Minutes,Complete,Grade,Comments
+//Cadence McCarthy Final Project
+//Assignment file
+      //After print out array
+      
+//import
 import java.time.LocalDate;
+
 public class Assignment {
 
-private LocalDate date;
-private String subject;
-private int minutes;
-private boolean complete;
-private double grade;
-private String comments;
+   private String name;
+   private LocalDate dueDate;
+   private int classNum;
+   private String notes;
+   private boolean complete;
+   
+   
+   
+// creates what is in an assignment
+   Assignment(String name, LocalDate dueDate, int classNum, String notes, boolean complete) {
+      this.name = name;
+      this.dueDate = dueDate;
+      this.classNum = classNum;
+      this.notes = notes;
+      this.complete = complete;
+   }
 
-Assignment(LocalDate d, String s, int m, boolean c1, double g, String c2) {
-  date = d;
-  subject = s;
-  minutes = m;
-  complete = c1;
-  grade = g;
-  comments = c2;
-}
+// getters
+   public String getName() {
+      return this.name;
+   }
+   public LocalDate getDueDate() {
+      return this.dueDate;
+   }
 
-public LocalDate getDate() {
-  return date;
-}
-public String getSubject() {
-  return subject;
-}
-public int getMinutes() {
-  return minutes;
-}
-public boolean getComplete() {
-  return complete;
-}
-public String getComments() {
-  return comments;
-}
+   public int getClassNum() {
+      return this.classNum;
+   }
 
-public String toString() {
-  return String.format("%d, %s, %d, %b, %s", date.toEpochDay(), subject, minutes, complete, comments);
-}
+   public String getNotes() {
+      return this.notes;
+   }
+   
+   public boolean getComplete() {
+      return this.complete;
+   }
+
+
+// setters - later ... as needed
+
+// toString
+   public String toString() {
+      return name + ", " + dueDate + ", " + classNum + ", " + notes + ", " + complete;
+   }
+ // toStrings are public
+ // toStrings return a String
+ // toStrings have ZERO parameters
+ // inside the toString, you build a String (so you have to declare one and add the fields to it)
+ // at the end you return the string you built.
+ 
 }
