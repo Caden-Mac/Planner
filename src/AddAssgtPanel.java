@@ -1,39 +1,69 @@
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.BoxLayout;
 import java.awt.Container;
-import java.awt.Component;
-
+import javax.swing.JComponent;
+import javax.swing.JTextArea;
+import javax.swing.JCheckBox;
+import java.awt.Color;
+import java.awt.Dimension;
 
 public class AddAssgtPanel extends JPanel {
-    JPanel.setSize(500, 500);
-    JPanel.setLayout(new BoxLayout(JPanel, BoxLayout.Y_AXIS));
-    //name
-    JLabel nameLabel = new JLabel;
-    JTextField nameAnswer = new JTextField;
-    //dueDate
-    JLabel dueDateLabel = new JLabel;
-    JTextField dueDateAnswer = new JTextField;
+
+public AddAssgtPanel() {
+    setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+    setBackground(Color.BLACK);
+
+    createName();
+    createDueDate();
+    
     //classNum
-    JLabel classNumLabel = new JLabel;
-    JTextField classNumAnswer = new JTextField;
+    JLabel classNumLabel = new JLabel("Class Number");
+    JTextField classNumAnswer = new JTextField(5);
     //notes
-    JLabel notesLabel = new JLabel;
-    JTextField notesAnswer = new JTextField;
+    JLabel notesLabel = new JLabel();
+    JTextArea notesAnswer = new JTextArea();
     //complete
-    JLabel completeLabel = new JLabel;
-    JTextField completeAnswer = new JTextField;
+    JLabel completeLabel = new JLabel();
+    JCheckBox completeAnswer = new JCheckBox();
+    
+    
+    changePanelSize(400, 600);
 }
 
-
-public createComponents(JLabel label, JTextField answer) {
-   JLabel label = new JLabel;
-   
-   JTextField answer = new JTextField;
-   
+private void createName() {
+    //name
+    JLabel nameLabel = new JLabel("Name: ");
+    JTextField nameAnswer = new JTextField(12);
+    setupComponents(nameLabel);
+    setupComponents(nameAnswer);
+    nameAnswer.setText("THIS IS THE TEXT FIELD");
+    add(nameLabel);
+    add(nameAnswer);
 }
 
-   JPanel.setVisible(true);
+private void createDueDate() {
+    //dueDate
+    JLabel dueDateLabel = new JLabel("Date Due");
+    JTextField dueDateAnswer = new JTextField(12);
+    setupComponents(dueDateLabel);
+    setupComponents(dueDateAnswer);
+    add(dueDateLabel);
+    add(dueDateAnswer);
+}
+public void setupComponents(JComponent component) {
+   
+   component.setOpaque(true);
+   component.setForeground(Color.BLUE);
+   component.setBackground(Color.YELLOW);   
+}
 
+private void changePanelSize(int width, int height) {
+  Dimension dim = new Dimension(width, height);
+  setPreferredSize(dim);
+  setMinimumSize(dim);
+  setMaximumSize(dim);  
+}
 }
