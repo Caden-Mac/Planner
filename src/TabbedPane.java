@@ -39,7 +39,7 @@ public class TabbedPane {
       frame.setLayout(null);  
       frame.setVisible(true);  
    }  
-   }
+}
 
 
 
@@ -51,89 +51,89 @@ public class p2 extends JPanel {
    private String notes;
 
 
-public p2() {
-    setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-    setBackground(Color.BLACK);
+   public p2() {
+      setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+      setBackground(Color.BLACK);
     //JPanel.setTitle("Cadence's Personal Planner");
-
-    createName();
-    createDueDate();
-    createClassNum();
-    createNotes();
-    createAddButton();
-    
-    
-    changePanelSize(400, 600);
-}
-
-private void createName() {
-    //name
-    JLabel nameLabel = new JLabel("Name: ");
-    JTextField nameAnswer = new JTextField(12);
-    setupComponents(nameLabel);
-    setupComponents(nameAnswer);
-    nameAnswer.setText("THIS IS THE TEXT FIELD");
-    add(nameLabel);
-    add(nameAnswer);
-    add(Box.createRigidArea(new Dimension(0, 10)));
-}
-
-private void createDueDate() {
-    //dueDate
-    JLabel dueDateLabel = new JLabel("Date Due: ");
-    JTextField dueDateAnswer = new JTextField(12);
-    setupComponents(dueDateLabel);
-    setupComponents(dueDateAnswer);
-    add(dueDateLabel);
-    add(dueDateAnswer);
-    add(Box.createRigidArea(new Dimension(0, 10)));
-}
-
-private void createClassNum() {
-    //classNum
-    JLabel classNumLabel = new JLabel("Class Number: ");
-    JTextField classNumAnswer = new JTextField(5);
-    setupComponents(classNumLabel);
-    setupComponents(classNumAnswer);
-    add(classNumLabel);
-    add(classNumAnswer);
-    add(Box.createRigidArea(new Dimension(0, 10)));
-}
-
-private void createNotes() {
-    //notes
-    JLabel notesLabel = new JLabel("Notes: ");
-    JTextArea notesAnswer = new JTextArea();
-    setupComponents(notesLabel);
-    setupComponents(notesAnswer);
-    add(notesLabel);
-    add(notesAnswer);
-    add(Box.createRigidArea(new Dimension(0, 10)));
-}
-
-public void buttonAction(ActionEvent e){  
-   addButton.setText("Welcome to Java.");  
-}  
-
-
-private void createAddButton() { //implements ActionListener {
-   JButton addButton = new JButton("Add Assignment");
-   addButton.addActionListener(buttonAction);
-   add(addButton);
-}
-
-
-public void setupComponents(JComponent component) {
    
-   component.setOpaque(true);
-   component.setForeground(Color.BLUE);
-   component.setBackground(Color.LIGHT_GRAY);   
-}
+      createName();
+      createDueDate();
+      createClassNum();
+      createNotes();
+      createAddButton();
+    
+    
+      changePanelSize(400, 600);
+   }
 
-private void changePanelSize(int width, int height) {
-  Dimension dim = new Dimension(width, height);
-  setPreferredSize(dim);
-  setMinimumSize(dim);
-  setMaximumSize(dim);  
-}
+   private void createName() {
+    //name
+      JLabel nameLabel = new JLabel("Name: ");
+      JTextField nameAnswer = new JTextField(12);
+      setupComponents(nameLabel);
+      setupComponents(nameAnswer);
+      nameAnswer.setText("THIS IS THE TEXT FIELD");
+      add(nameLabel);
+      add(nameAnswer);
+      add(Box.createRigidArea(new Dimension(0, 10)));
+   }
+
+   private void createDueDate() {
+    //dueDate
+      JLabel dueDateLabel = new JLabel("Date Due: ");
+      JTextField dueDateAnswer = new JTextField(12);
+      setupComponents(dueDateLabel);
+      setupComponents(dueDateAnswer);
+      add(dueDateLabel);
+      add(dueDateAnswer);
+      add(Box.createRigidArea(new Dimension(0, 10)));
+   }
+
+   private void createClassNum() {
+    //classNum
+      JLabel classNumLabel = new JLabel("Class Number: ");
+      JTextField classNumAnswer = new JTextField(5);
+      setupComponents(classNumLabel);
+      setupComponents(classNumAnswer);
+      add(classNumLabel);
+      add(classNumAnswer);
+      add(Box.createRigidArea(new Dimension(0, 10)));
+   }
+
+   private void createNotes() {
+    //notes
+      JLabel notesLabel = new JLabel("Notes: ");
+      JTextArea notesAnswer = new JTextArea();
+      setupComponents(notesLabel);
+      setupComponents(notesAnswer);
+      add(notesLabel);
+      add(notesAnswer);
+      add(Box.createRigidArea(new Dimension(0, 10)));
+   }
+
+   public void buttonAction(ActionEvent e){  
+      addButton.setText("Welcome to Java.");  
+   }  
+
+
+   private void createAddButton() { //implements ActionListener {
+      JButton addButton = new JButton("Add Assignment");
+      addButton.addActionListener(buttonAction);
+      add(addButton);
+   }
+
+
+   public void setupComponents(JComponent component) {
+   
+      component.setOpaque(true);
+      component.setForeground(Color.BLUE);
+      component.setBackground(Color.LIGHT_GRAY);   
+   }
+
+   private void changePanelSize(int width, int height) {
+      Dimension dim = new Dimension(width, height);
+      setPreferredSize(dim);
+      setMinimumSize(dim);
+      setMaximumSize(dim);  
+   }
 }
