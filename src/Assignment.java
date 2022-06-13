@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class Assignment {
 
    private String name;
-   private LocalDate dueDate;
+   private String dueDate;
    private int classNum;
    private String notes;
    private boolean complete;
@@ -16,7 +16,7 @@ public class Assignment {
    
    
 // creates what is in an assignment
-   Assignment(String name, LocalDate dueDate, int classNum, String notes, boolean complete) {
+   Assignment(String name, String dueDate, int classNum, String notes, boolean complete) {
       this.name = name;
       this.dueDate = dueDate;
       this.classNum = classNum;
@@ -28,7 +28,7 @@ public class Assignment {
    public String getName() {
       return this.name;
    }
-   public LocalDate getDueDate() {
+   public String getDueDate() {
       return this.dueDate;
    }
 

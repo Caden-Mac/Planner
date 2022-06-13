@@ -7,7 +7,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.time.LocalDate;
+
 
 public class ReadIn {
    public static final String DEFAULT_FILE = "AssignmentList_INFO.csv";
@@ -74,7 +74,7 @@ public class ReadIn {
    private void readFile() {
    // PUT THE FIELDS here as local variables set to null
    String name = null;
-   LocalDate dueDate = null;
+   String dueDate = null;
    int classNum = 0;
    String notes = null;
    boolean complete = false;
@@ -95,7 +95,7 @@ public class ReadIn {
          // put the parts into the local variables (will require some conversions - date/int)
          
          name = parts[0];
-         dueDate = LocalDate.ofEpochDay(Long.parseLong(parts[1]));       //LocalDate date2 = LocalDate.ofEpochDay(numDate);
+         dueDate = parts[1];
          classNum = Integer.parseInt(parts[2]);
          notes = parts[3];
          complete = Boolean.parseBoolean(parts[4]);
