@@ -15,10 +15,10 @@ import javax.swing.*;
 
 public class AddAssgtPanel extends JPanel {
 
-   private String name;
-   private String dueDate;
-   private int classNum;
-   private String notes;
+   private JTextField nameAnswer;
+   private JTextField dueDateAnswer;
+   private JTextField classNumAnswer;
+   private JTextArea notesAnswer;
 
 
    public AddAssgtPanel() {
@@ -39,7 +39,7 @@ public class AddAssgtPanel extends JPanel {
    private void createName() {
     //name
       JLabel nameLabel = new JLabel("Name: ");
-      JTextField nameAnswer = new JTextField(12);
+      nameAnswer = new JTextField(12);
       setupComponents(nameLabel);
       setupComponents(nameAnswer);
       nameAnswer.setText("THIS IS THE TEXT FIELD");
@@ -51,7 +51,7 @@ public class AddAssgtPanel extends JPanel {
    private void createDueDate() {
     //dueDate
       JLabel dueDateLabel = new JLabel("Date Due: ");
-      JTextField dueDateAnswer = new JTextField(12);
+      dueDateAnswer = new JTextField(12);
       setupComponents(dueDateLabel);
       setupComponents(dueDateAnswer);
       add(dueDateLabel);
@@ -62,7 +62,7 @@ public class AddAssgtPanel extends JPanel {
    private void createClassNum() {
     //classNum
       JLabel classNumLabel = new JLabel("Class Number: ");
-      JTextField classNumAnswer = new JTextField(5);
+      classNumAnswer = new JTextField(5);
       setupComponents(classNumLabel);
       setupComponents(classNumAnswer);
       add(classNumLabel);
@@ -73,7 +73,7 @@ public class AddAssgtPanel extends JPanel {
    private void createNotes() {
     //notes
       JLabel notesLabel = new JLabel("Notes: ");
-      JTextArea notesAnswer = new JTextArea();
+      notesAnswer = new JTextArea();
       setupComponents(notesLabel);
       setupComponents(notesAnswer);
       add(notesLabel);
@@ -87,11 +87,16 @@ public class AddAssgtPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
             
-               button.setText("Welcome to Java.");  
+               //call constructor
+               Assignment assignment = new Assignment(nameAnswer.getText(), dueDateAnswer.getText(), Integer.parseInt(classNumAnswer.getText()), notesAnswer.getText(), false); 
+               System.out.println(assignment);
             }
          } ;
       return al;
    } 
+   
+   
+
 
 
    private void createAddButton() { 

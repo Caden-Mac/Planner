@@ -31,14 +31,16 @@ public class TabbedPane  {
       
       
       JTabbedPane tp = new JTabbedPane();  
-      tp.setBounds(50,50,250,300);  
+     // tp.setBounds(50,50,250,300); 
+      tp.setSize(400, 600); 
       tp.add("main",p1);  
       tp.add("visit",p2);  
       tp.add("help",p3);    
       frame.add(tp);  
       frame.setSize(400,400); 
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-      frame.setLayout(null);  
+     // frame.setLayout(null);  
+      frame.pack();
       frame.setVisible(true);  
    }  
 }
