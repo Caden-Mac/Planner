@@ -6,7 +6,7 @@ public class Tester {
    
       MyFrame frame = new MyFrame();
    //   frame.add(new AddAssgtPanel(), BorderLayout.CENTER);
-   frame.add(new TabbedPane(), BorderLayout.CENTER);
+      frame.add(new TabbedPane(), BorderLayout.CENTER);
       frame.setVisible(true);
    }
 }
