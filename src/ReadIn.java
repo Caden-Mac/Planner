@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 
 
 public class ReadIn {
+   public static final String FOLDER = "../resources/";
    public static final String DEFAULT_FILE = "AssignmentList_INFO.csv";
 
 // ADD A FIELD FOR THE FILENAME
@@ -18,7 +19,7 @@ public class ReadIn {
 
 //constructors
    public ReadIn() {
-      this (DEFAULT_FILE);
+      this (FOLDER + DEFAULT_FILE);
    }
 
    public ReadIn(String filename) {
