@@ -13,8 +13,9 @@ import java.awt.event.*;
 import javax.swing.*;  
 
 
-public class TabbedPane {  
+public class TabbedPane  {  
    JFrame frame;  
+   
    TabbedPane(){  
       frame = new JFrame();  
       JTextArea ta = new JTextArea(400,400);  
@@ -24,7 +25,7 @@ public class TabbedPane {
       p1.add(ta); 
       
       JPanel p2 = new JPanel(); 
-      p2.add(AddAssgtPanel);
+      p2.add(new AddAssgtPanel());
       
       JPanel p3 = new JPanel();  
       
@@ -35,14 +36,15 @@ public class TabbedPane {
       tp.add("visit",p2);  
       tp.add("help",p3);    
       frame.add(tp);  
-      frame.setSize(400,400);  
+      frame.setSize(400,400); 
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
       frame.setLayout(null);  
       frame.setVisible(true);  
    }  
 }
 
 
-
+/*
 public class p2 extends JPanel {
 
    private String name;
@@ -137,3 +139,4 @@ public class p2 extends JPanel {
       setMaximumSize(dim);  
    }
 }
+*/

@@ -81,14 +81,22 @@ public class AddAssgtPanel extends JPanel {
       add(Box.createRigidArea(new Dimension(0, 10)));
    }
 
-   public void buttonAction(ActionEvent e){  
-      addButton.setText("Welcome to Java.");  
-   }  
+   public ActionListener buttonAction(JButton button){   
+      ActionListener al = 
+         new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            
+               button.setText("Welcome to Java.");  
+            }
+         } ;
+      return al;
+   } 
 
 
-   private void createAddButton() { //implements ActionListener {
+   private void createAddButton() { 
       JButton addButton = new JButton("Add Assignment");
-      addButton.addActionListener(buttonAction);
+      addButton.addActionListener(buttonAction(addButton));
       add(addButton);
    }
 
