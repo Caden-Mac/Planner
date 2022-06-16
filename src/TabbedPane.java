@@ -9,9 +9,12 @@ import javax.swing.JTextArea;
 import javax.swing.JCheckBox;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.*; 
-import javax.swing.*;  
 import java.awt.Font;
+import java.io.File;
+import javax.swing.JTabbedPane;
+import javax.swing.JSeparator;
+import javax.swing.SwingConstants;
+import javax.swing.UIManager;
 
 public class TabbedPane extends JTabbedPane {  
 
@@ -19,39 +22,49 @@ public class TabbedPane extends JTabbedPane {
 
    TabbedPane(){  
    
-   Font font = new Font("ELEPHNT", Font.CENTER_BASELINE, 32);
-      setFont(font);
-      setSize(400,250);
+      setTabPaneFormat();
          //How do I change the color of the white box indicating a tab is selected
-      setBackground(Color.CYAN);
-      //setTitle("Cadence's Personal Planner");
-      //setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-      
-      JTextArea ta = new JTextArea(400,400);  
-      
-      
+               // THIS IS DOABLE, BUT NOT SIMPLE
+               
       JPanel p1 = new JPanel();  
-         mainPanel = new JPanel();
-         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
-         mainPanel.add(new AddAssgtPanel()); 
-         mainPanel.add(new JSeparator(SwingConstants.VERTICAL));
-         mainPanel.add(new AssignDisplay());
+      mainPanel = new JPanel();
+      mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.LINE_AXIS));
+      mainPanel.add(new AddAssgtPanel()); 
+      mainPanel.add(new JSeparator(SwingConstants.VERTICAL));
+      mainPanel.add(new AssignDisplay());
       p1.add(mainPanel);
       
+   
+      // Schedule panel
       JPanel p2 = new JPanel(); 
-
-         p2.add(ta);
-      
+   
+      // Settings Panel
       JPanel p3 = new JPanel();
-
-      
-      
         
       add(" Main ",p1);  
       add("Schedule",p2);  
       add("Settings",p3); 
-      
+   }
 
-   }  
+   private void setTabPaneFormat() {
+      String windowsPath = "C:\\Windows\\Fonts\\";
+      Font font = CommonGUI.createFont(windowsPath + "ELEPHNT.TTF", 32);
+      setFont(font);
+      setUI(
+         new javax.swing.plaf.basic.BasicTabbedPaneUI() {
+            @Override
+            protected int calculateTabHeight(int tabPlacement, int tabIndex,
+            int fontHeight) {
+               return 64;
+            }
+         });
+         
+        
+      setSize(400,250);
+      setBackground(Color.CYAN);
+   
+   
+   }
+   
 }
 

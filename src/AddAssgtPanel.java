@@ -13,8 +13,7 @@ import javax.swing.JTextArea;
 import javax.swing.JCheckBox;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.*; 
-import javax.swing.*;  
+  
 
 
 import java.awt.event.ActionListener;
@@ -37,16 +36,12 @@ public class AddAssgtPanel extends JPanel {
       setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
       setBackground(Color.BLACK);
 
-    //JPanel.setTitle("Cadence's Personal Planner");
-   
       createName();
       createDueDate();
       createClassNum();
       createNotes();
       createAddButton();
-    
-    
-      changePanelSize(400, 600);
+  //    changePanelSize(400, 600);
    }
 
    private void createName() {
@@ -113,7 +108,8 @@ public class AddAssgtPanel extends JPanel {
    private void createNotes() {
     //notes
       JLabel notesLabel = new JLabel("Notes: ");
-      notesAnswer = new JTextArea();
+      notesAnswer = new JTextArea(10, 20);
+      notesAnswer.setLineWrap(true);
       setupComponents(notesLabel);
       setupComponents(notesAnswer);
       add(notesLabel);
@@ -149,7 +145,9 @@ public class AddAssgtPanel extends JPanel {
 
       component.setOpaque(true);
       component.setForeground(Color.BLUE);
-      component.setBackground(Color.LIGHT_GRAY);   
+      component.setBackground(Color.LIGHT_GRAY);
+      component.setMaximumSize(component.getPreferredSize());
+
    }
 
    private void changePanelSize(int width, int height) {

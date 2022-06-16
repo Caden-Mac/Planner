@@ -1,12 +1,16 @@
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.FontFormatException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import java.io.File;
+import java.io.IOException;
 
 public class CommonGUI {
 
@@ -60,4 +64,25 @@ public class CommonGUI {
       button.setAlignmentX(Component.CENTER_ALIGNMENT);
       return button;
    } 
+   
+   
+   public static Font createFont(String fontFileName, float pt) {
+   
+     Font font = null;
+      try {
+      //Returned font is of pt size 1
+         font = Font.createFont(Font.TRUETYPE_FONT, new File(fontFileName));
+      
+      //Derive and return a 12 pt version:
+      //Need to use float otherwise
+      //it would be interpreted as style
+      
+         return font.deriveFont(pt);
+      
+      } catch (IOException|FontFormatException e) {
+      System.out.println("IO Exception creating font: " + fontFileName);
+      // Handle exception
+      }
+      return font;
+   }
 }
