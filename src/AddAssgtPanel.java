@@ -13,6 +13,9 @@ import javax.swing.JTextArea;
 import javax.swing.JCheckBox;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.*; 
+import javax.swing.*;  
+
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -26,17 +29,19 @@ public class AddAssgtPanel extends JPanel {
    private JTextField dueDateAnswer_MM;
    private JTextField dueDateAnswer_DD;
    private JTextField dueDateAnswer_YY;
+
    private JTextArea notesAnswer;
 
 
    public AddAssgtPanel() {
       setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
       setBackground(Color.BLACK);
-      
+
+    //JPanel.setTitle("Cadence's Personal Planner");
    
       createName();
-      createClassNum();
       createDueDate();
+      createClassNum();
       createNotes();
       createAddButton();
     
@@ -50,6 +55,7 @@ public class AddAssgtPanel extends JPanel {
       nameAnswer = new JTextField(12);
       setupComponents(nameLabel);
       setupComponents(nameAnswer);
+
       add(nameLabel);
       add(nameAnswer);
       add(Box.createRigidArea(new Dimension(0, 25)));
@@ -101,6 +107,7 @@ public class AddAssgtPanel extends JPanel {
       dueDate.add(dueDateAnswer_YY);
       add(dueDate);
       add(Box.createRigidArea(new Dimension(0, 25)));
+
    }
 
    private void createNotes() {
@@ -111,7 +118,9 @@ public class AddAssgtPanel extends JPanel {
       setupComponents(notesAnswer);
       add(notesLabel);
       add(notesAnswer);
+
       add(Box.createRigidArea(new Dimension(0, 25)));
+
    }
 
    public ActionListener buttonAction(JButton button){   
@@ -122,15 +131,11 @@ public class AddAssgtPanel extends JPanel {
             
                //call constructor
                Assignment assignment = new Assignment(nameAnswer.getText(), Integer.parseInt(classNumAnswer.getText()), dueDateAnswer_MM.getText(), dueDateAnswer_DD.getText(), dueDateAnswer_YY.getText(), notesAnswer.getText(), false); 
-               System.out.println(assignment);
+              System.out.println(assignment);
             }
          } ;
       return al;
    } 
-   
-   
-
-
 
    private void createAddButton() { 
       JButton addButton = new JButton("Add Assignment");
@@ -141,6 +146,7 @@ public class AddAssgtPanel extends JPanel {
 
    public void setupComponents(JComponent component) {
    
+
       component.setOpaque(true);
       component.setForeground(Color.BLUE);
       component.setBackground(Color.LIGHT_GRAY);   

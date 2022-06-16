@@ -39,9 +39,11 @@ public class TabbedPane extends JTabbedPane {
       p1.add(mainPanel);
       
       JPanel p2 = new JPanel(); 
+
          p2.add(ta);
       
       JPanel p3 = new JPanel();
+
       
       
         
@@ -49,8 +51,7 @@ public class TabbedPane extends JTabbedPane {
       add("Schedule",p2);  
       add("Settings",p3); 
       
+
    }  
 }
-
-
 
