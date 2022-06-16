@@ -11,134 +11,47 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.*; 
 import javax.swing.*;  
+import java.awt.Font;
 
+public class TabbedPane extends JTabbedPane {  
 
-public class TabbedPane  {  
-   JFrame frame;  
-   
+   private JPanel mainPanel;
+
    TabbedPane(){  
-      frame = new JFrame();  
+   
+   Font font = new Font("ELEPHNT", Font.CENTER_BASELINE, 32);
+      setFont(font);
+      setSize(400,250);
+         //How do I change the color of the white box indicating a tab is selected
+      setBackground(Color.CYAN);
+      //setTitle("Cadence's Personal Planner");
+      //setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+      
       JTextArea ta = new JTextArea(400,400);  
       
       
       JPanel p1 = new JPanel();  
-      p1.add(ta); 
+         mainPanel = new JPanel();
+         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
+         mainPanel.add(new AddAssgtPanel()); 
+         mainPanel.add(new JSeparator(SwingConstants.VERTICAL));
+         mainPanel.add(new AssignDisplay());
+      p1.add(mainPanel);
       
       JPanel p2 = new JPanel(); 
-      p2.add(new AddAssgtPanel());
+
+         p2.add(ta);
       
-      JPanel p3 = new JPanel();  
+      JPanel p3 = new JPanel();
+
       
       
-      JTabbedPane tp = new JTabbedPane();  
-     // tp.setBounds(50,50,250,300); 
-      tp.setSize(400, 600); 
-      tp.add("main",p1);  
-      tp.add("visit",p2);  
-      tp.add("help",p3);    
-      frame.add(tp);  
-      frame.setSize(400,400); 
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-     // frame.setLayout(null);  
-      frame.pack();
-      frame.setVisible(true);  
+        
+      add(" Main ",p1);  
+      add("Schedule",p2);  
+      add("Settings",p3); 
+      
+
    }  
 }
 
-
-/*
-public class p2 extends JPanel {
-
-   private String name;
-   private String dueDate;
-   private int classNum;
-   private String notes;
-
-
-   public p2() {
-      setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-      setBackground(Color.BLACK);
-    //JPanel.setTitle("Cadence's Personal Planner");
-   
-      createName();
-      createDueDate();
-      createClassNum();
-      createNotes();
-      createAddButton();
-    
-    
-      changePanelSize(400, 600);
-   }
-
-   private void createName() {
-    //name
-      JLabel nameLabel = new JLabel("Name: ");
-      JTextField nameAnswer = new JTextField(12);
-      setupComponents(nameLabel);
-      setupComponents(nameAnswer);
-      nameAnswer.setText("THIS IS THE TEXT FIELD");
-      add(nameLabel);
-      add(nameAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
-   }
-
-   private void createDueDate() {
-    //dueDate
-      JLabel dueDateLabel = new JLabel("Date Due: ");
-      JTextField dueDateAnswer = new JTextField(12);
-      setupComponents(dueDateLabel);
-      setupComponents(dueDateAnswer);
-      add(dueDateLabel);
-      add(dueDateAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
-   }
-
-   private void createClassNum() {
-    //classNum
-      JLabel classNumLabel = new JLabel("Class Number: ");
-      JTextField classNumAnswer = new JTextField(5);
-      setupComponents(classNumLabel);
-      setupComponents(classNumAnswer);
-      add(classNumLabel);
-      add(classNumAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
-   }
-
-   private void createNotes() {
-    //notes
-      JLabel notesLabel = new JLabel("Notes: ");
-      JTextArea notesAnswer = new JTextArea();
-      setupComponents(notesLabel);
-      setupComponents(notesAnswer);
-      add(notesLabel);
-      add(notesAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
-   }
-
-   public void buttonAction(ActionEvent e){  
-      addButton.setText("Welcome to Java.");  
-   }  
-
-
-   private void createAddButton() { //implements ActionListener {
-      JButton addButton = new JButton("Add Assignment");
-      addButton.addActionListener(buttonAction);
-      add(addButton);
-   }
-
-
-   public void setupComponents(JComponent component) {
-   
-      component.setOpaque(true);
-      component.setForeground(Color.BLUE);
-      component.setBackground(Color.LIGHT_GRAY);   
-   }
-
-   private void changePanelSize(int width, int height) {
-      Dimension dim = new Dimension(width, height);
-      setPreferredSize(dim);
-      setMinimumSize(dim);
-      setMaximumSize(dim);  
-   }
-}
-*/

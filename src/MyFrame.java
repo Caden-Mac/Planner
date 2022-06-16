@@ -4,7 +4,7 @@ import java.awt.BorderLayout;
 public class MyFrame extends JFrame {
 
    public MyFrame() {
-      this("Generic JFrame");
+      this("Cadence's Custom Personal Planner");
    }
    
    public MyFrame(String title) {
@@ -16,7 +16,7 @@ public class MyFrame extends JFrame {
 // Sets the common properties for the JFrame
    private void setup() {
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      setSize(800, 1200);
+      setSize(1000, 1200);
       setLocationRelativeTo(null);
      // pack();
       // setLocation(200, 100);

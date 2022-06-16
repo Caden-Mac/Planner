@@ -1,3 +1,7 @@
+//Creates the Panel that allows you to add new assignments
+
+
+
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -13,17 +17,26 @@ import java.awt.event.*;
 import javax.swing.*;  
 
 
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.Box;
+
 public class AddAssgtPanel extends JPanel {
 
    private JTextField nameAnswer;
-   private JTextField dueDateAnswer;
    private JTextField classNumAnswer;
+   private JPanel dueDate;
+   private JTextField dueDateAnswer_MM;
+   private JTextField dueDateAnswer_DD;
+   private JTextField dueDateAnswer_YY;
+
    private JTextArea notesAnswer;
 
 
    public AddAssgtPanel() {
       setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
       setBackground(Color.BLACK);
+
     //JPanel.setTitle("Cadence's Personal Planner");
    
       createName();
@@ -42,21 +55,10 @@ public class AddAssgtPanel extends JPanel {
       nameAnswer = new JTextField(12);
       setupComponents(nameLabel);
       setupComponents(nameAnswer);
-      nameAnswer.setText("THIS IS THE TEXT FIELD");
+
       add(nameLabel);
       add(nameAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
-   }
-
-   private void createDueDate() {
-    //dueDate
-      JLabel dueDateLabel = new JLabel("Date Due: ");
-      dueDateAnswer = new JTextField(12);
-      setupComponents(dueDateLabel);
-      setupComponents(dueDateAnswer);
-      add(dueDateLabel);
-      add(dueDateAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
+      add(Box.createRigidArea(new Dimension(0, 25)));
    }
 
    private void createClassNum() {
@@ -67,7 +69,45 @@ public class AddAssgtPanel extends JPanel {
       setupComponents(classNumAnswer);
       add(classNumLabel);
       add(classNumAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
+      add(Box.createRigidArea(new Dimension(0, 25)));
+   }
+   
+   private void createDueDate() {
+    //dueDate
+      JLabel dueDateLabel = new JLabel("Date Due: ");
+ 
+      dueDate = new JPanel();
+      dueDate.setLayout(new BoxLayout(dueDate, BoxLayout.X_AXIS));
+ 
+      JLabel dueDateLabel_MM = new JLabel("Month");   //Month due
+      dueDateAnswer_MM = new JTextField(2);
+ 
+      JLabel dueDateLabel_DD = new JLabel("Day");     //Day due
+      dueDateAnswer_DD = new JTextField(2);
+ 
+      JLabel dueDateLabel_YY = new JLabel("Year");    //Year due
+      dueDateAnswer_YY = new JTextField(4);
+ 
+      setupComponents(dueDateLabel);
+      setupComponents(dueDateLabel_MM);
+      setupComponents(dueDateAnswer_MM);
+      setupComponents(dueDateLabel_DD);
+      setupComponents(dueDateAnswer_DD);
+      setupComponents(dueDateLabel_YY);
+      setupComponents(dueDateAnswer_YY);
+ 
+      add(dueDateLabel);
+      dueDate.add(dueDateLabel_MM);
+      dueDate.add(dueDateAnswer_MM);
+      add(Box.createRigidArea(new Dimension(10, 0)));
+      dueDate.add(dueDateLabel_DD);
+      dueDate.add(dueDateAnswer_DD);
+      add(Box.createRigidArea(new Dimension(10, 0)));
+      dueDate.add(dueDateLabel_YY);
+      dueDate.add(dueDateAnswer_YY);
+      add(dueDate);
+      add(Box.createRigidArea(new Dimension(0, 25)));
+
    }
 
    private void createNotes() {
@@ -78,7 +118,9 @@ public class AddAssgtPanel extends JPanel {
       setupComponents(notesAnswer);
       add(notesLabel);
       add(notesAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
+
+      add(Box.createRigidArea(new Dimension(0, 25)));
+
    }
 
    public ActionListener buttonAction(JButton button){   
@@ -88,16 +130,12 @@ public class AddAssgtPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
             
                //call constructor
-               Assignment assignment = new Assignment(nameAnswer.getText(), dueDateAnswer.getText(), Integer.parseInt(classNumAnswer.getText()), notesAnswer.getText(), false); 
-               System.out.println(assignment);
+               Assignment assignment = new Assignment(nameAnswer.getText(), Integer.parseInt(classNumAnswer.getText()), dueDateAnswer_MM.getText(), dueDateAnswer_DD.getText(), dueDateAnswer_YY.getText(), notesAnswer.getText(), false); 
+              System.out.println(assignment);
             }
          } ;
       return al;
    } 
-   
-   
-
-
 
    private void createAddButton() { 
       JButton addButton = new JButton("Add Assignment");
@@ -108,6 +146,7 @@ public class AddAssgtPanel extends JPanel {
 
    public void setupComponents(JComponent component) {
    
+
       component.setOpaque(true);
       component.setForeground(Color.BLUE);
       component.setBackground(Color.LIGHT_GRAY);   
