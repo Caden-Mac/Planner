@@ -13,9 +13,10 @@ import javax.swing.JTextArea;
 import javax.swing.JCheckBox;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.*; 
-import javax.swing.*;  
 
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.Box;
 
 public class AddAssgtPanel extends JPanel {
 
@@ -68,14 +69,19 @@ public class AddAssgtPanel extends JPanel {
    private void createDueDate() {
     //dueDate
       JLabel dueDateLabel = new JLabel("Date Due: ");
+ 
       dueDate = new JPanel();
       dueDate.setLayout(new BoxLayout(dueDate, BoxLayout.X_AXIS));
+ 
       JLabel dueDateLabel_MM = new JLabel("Month");   //Month due
       dueDateAnswer_MM = new JTextField(2);
+ 
       JLabel dueDateLabel_DD = new JLabel("Day");     //Day due
       dueDateAnswer_DD = new JTextField(2);
+ 
       JLabel dueDateLabel_YY = new JLabel("Year");    //Year due
       dueDateAnswer_YY = new JTextField(4);
+ 
       setupComponents(dueDateLabel);
       setupComponents(dueDateLabel_MM);
       setupComponents(dueDateAnswer_MM);
@@ -83,8 +89,9 @@ public class AddAssgtPanel extends JPanel {
       setupComponents(dueDateAnswer_DD);
       setupComponents(dueDateLabel_YY);
       setupComponents(dueDateAnswer_YY);
+ 
       add(dueDateLabel);
-      dueDate.add(dueDateAnswer_MM);
+      dueDate.add(dueDateLabel_MM);
       dueDate.add(dueDateAnswer_MM);
       add(Box.createRigidArea(new Dimension(10, 0)));
       dueDate.add(dueDateLabel_DD);
