@@ -11,13 +11,16 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.*; 
 import javax.swing.*;  
-
+import java.awt.Font;
 
 public class TabbedPane extends JTabbedPane {  
 
    private JPanel mainPanel;
 
    TabbedPane(){  
+   
+   Font font = new Font("ELEPHNT", Font.CENTER_BASELINE, 32);
+      setFont(font);
       setSize(400,250);
          //How do I change the color of the white box indicating a tab is selected
       setBackground(Color.CYAN);
