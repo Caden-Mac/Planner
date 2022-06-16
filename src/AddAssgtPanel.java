@@ -16,10 +16,10 @@ import javax.swing.*;
 public class AddAssgtPanel extends JPanel {
 
    private JTextField nameAnswer;
+   private JTextField classNumAnswer;
    private JTextField dueDateAnswer_MM;
    private JTextField dueDateAnswer_DD;
    private JTextField dueDateAnswer_YY;
-   private JTextField classNumAnswer;
    private JTextArea notesAnswer;
 
 
@@ -29,8 +29,8 @@ public class AddAssgtPanel extends JPanel {
     //JPanel.setTitle("Cadence's Personal Planner");
    
       createName();
-      createDueDate();
       createClassNum();
+      createDueDate();
       createNotes();
       createAddButton();
     
@@ -47,10 +47,21 @@ public class AddAssgtPanel extends JPanel {
       nameAnswer.setText("THIS IS THE TEXT FIELD");
       add(nameLabel);
       add(nameAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
+      add(Box.createRigidArea(new Dimension(0, 25)));
    }
 
-   private void createDueDate() {
+   private void createClassNum() {
+    //classNum
+      JLabel classNumLabel = new JLabel("Class Number: ");
+      classNumAnswer = new JTextField(5);
+      setupComponents(classNumLabel);
+      setupComponents(classNumAnswer);
+      add(classNumLabel);
+      add(classNumAnswer);
+      add(Box.createRigidArea(new Dimension(0, 25)));
+   }
+   
+      private void createDueDate() {
     //dueDate
       JLabel dueDateLabel = new JLabel("Date Due: ");
       //how 
@@ -77,17 +88,6 @@ public class AddAssgtPanel extends JPanel {
       add(Box.createRigidArea(new Dimension(0, 25)));
    }
 
-   private void createClassNum() {
-    //classNum
-      JLabel classNumLabel = new JLabel("Class Number: ");
-      classNumAnswer = new JTextField(5);
-      setupComponents(classNumLabel);
-      setupComponents(classNumAnswer);
-      add(classNumLabel);
-      add(classNumAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
-   }
-
    private void createNotes() {
     //notes
       JLabel notesLabel = new JLabel("Notes: ");
@@ -96,7 +96,7 @@ public class AddAssgtPanel extends JPanel {
       setupComponents(notesAnswer);
       add(notesLabel);
       add(notesAnswer);
-      add(Box.createRigidArea(new Dimension(0, 10)));
+      add(Box.createRigidArea(new Dimension(0, 25)));
    }
 
    public ActionListener buttonAction(JButton button){   
@@ -106,7 +106,7 @@ public class AddAssgtPanel extends JPanel {
             public void actionPerformed(ActionEvent e) {
             
                //call constructor
-               Assignment assignment = new Assignment(nameAnswer.getText(), dueDateAnswer_MM.getText(), dueDateAnswer_DD.getText(), dueDateAnswer_YY.getText(), Integer.parseInt(classNumAnswer.getText()), notesAnswer.getText(), false); 
+               Assignment assignment = new Assignment(nameAnswer.getText(), Integer.parseInt(classNumAnswer.getText()), dueDateAnswer_MM.getText(), dueDateAnswer_DD.getText(), dueDateAnswer_YY.getText(), notesAnswer.getText(), false); 
                System.out.println(assignment);
             }
          } ;

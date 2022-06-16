@@ -74,10 +74,10 @@ public class ReadIn {
    private void readFile() {
    // PUT THE FIELDS here as local variables set to null
       String name = null;
+      int classNum = 0;
       String dueDate_MM = null;
       String dueDate_DD = null;
       String dueDate_YY = null;
-      int classNum = 0;
       String notes = null;
       boolean complete = false;
    
@@ -97,16 +97,16 @@ public class ReadIn {
          // put the parts into the local variables (will require some conversions - date/int)
          
          name = parts[0];
-         dueDate_MM = parts[1];
-         dueDate_DD = parts[2];
-         dueDate_YY = parts[3];
-         classNum = Integer.parseInt(parts[4]);
+         classNum = Integer.parseInt(parts[1]);
+         dueDate_MM = parts[2];
+         dueDate_DD = parts[3];
+         dueDate_YY = parts[4];
          notes = parts[5];
          complete = Boolean.parseBoolean(parts[6]);
          
          // now that you have all the parts, make an assignment and put it into the assign_Info array.
          
-         Assignment assignment = new Assignment(name, dueDate_MM, dueDate_DD, dueDate_YY, classNum, notes, complete);// create the assignment here
+         Assignment assignment = new Assignment(name, classNum, dueDate_MM, dueDate_DD, dueDate_YY, notes, complete);// create the assignment here
          assign_Info[assignNo] = assignment; // put assignment into array here
          assignNo++;                        // increment the arrayIndex
       //        System.out.println(line);

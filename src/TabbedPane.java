@@ -28,13 +28,16 @@ public class TabbedPane extends JTabbedPane {
       JPanel p2 = new JPanel(); 
       p2.add(new AddAssgtPanel());
       
-      JPanel p3 = new JPanel();  
+      JPanel p3 = new JPanel();
+      
+      JPanel p4 = new JPanel();  
       
       
       setBounds(50,50,250,300);  
-      add("main",p1);  
-      add("add",p2);  
-      add("help",p3);    
+      add(" Main ",p1);  
+      add(" Add ",p2);  
+      add("Schedule",p3); 
+      add("Settings",p4);
       
    }  
 }
