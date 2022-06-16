@@ -16,7 +16,8 @@ import javax.swing.*;
 public class TabbedPane extends JTabbedPane {  
 
    TabbedPane(){  
-      setBackground(Color.RED);
+      //How do I change the color of the white box indicating a tab is selected
+      setBackground(Color.CYAN);
       
       JTextArea ta = new JTextArea(400,400);  
       
@@ -32,11 +33,11 @@ public class TabbedPane extends JTabbedPane {
       
       setBounds(50,50,250,300);  
       add("main",p1);  
-      add("visit",p2);  
+      add("add",p2);  
       add("help",p3);    
       
    }  
-   }
+}
 
 
 

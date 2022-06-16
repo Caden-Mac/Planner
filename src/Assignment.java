@@ -8,7 +8,9 @@ import java.time.LocalDate;
 public class Assignment {
 
    private String name;
-   private String dueDate;
+   private String dueDate_MM;
+   private String dueDate_DD;
+   private String dueDate_YY;
    private int classNum;
    private String notes;
    private boolean complete;
@@ -16,9 +18,11 @@ public class Assignment {
    
    
 // creates what is in an assignment
-   Assignment(String name, String dueDate, int classNum, String notes, boolean complete) {
+   Assignment(String name, String dueDate_MM, String dueDate_DD, String dueDate_YY, int classNum, String notes, boolean complete) {
       this.name = name;
-      this.dueDate = dueDate;
+      this.dueDate_MM = dueDate_MM;
+      this.dueDate_DD = dueDate_DD;
+      this.dueDate_YY = dueDate_YY;
       this.classNum = classNum;
       this.notes = notes;
       this.complete = complete;
@@ -28,8 +32,17 @@ public class Assignment {
    public String getName() {
       return this.name;
    }
-   public String getDueDate() {
-      return this.dueDate;
+   
+   public String getDueDate_MM() {
+      return this.dueDate_MM;
+   }
+
+   public String getDueDate_DD() {
+      return this.dueDate_DD;
+   }
+
+   public String getDueDate_YY() {
+      return this.dueDate_YY;
    }
 
    public int getClassNum() {
@@ -49,7 +62,7 @@ public class Assignment {
 
 // toString
    public String toString() {
-      return name + ", " + dueDate + ", " + classNum + ", " + notes + ", " + complete;
+      return name + ", " + dueDate_MM + ", " + dueDate_DD + ", " + dueDate_YY + ", " + classNum + ", " + notes + ", " + complete;
    }
  // toStrings are public
  // toStrings return a String
