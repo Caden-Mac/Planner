@@ -1,10 +1,10 @@
-!1570;s
+!1572;s
 J
 SAU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 SCU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 S+U0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 SJU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012File\012CLASSPATH+=.%;\012CLASSPATH+=%<SRC_CLASSPATHS>%;\012ProjectOrFile\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Debug +Debug_Applet\012CLASSPATH=+%;%<INJECTION_CLASSPATHS>\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from https://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012CLASSPATH+=%<CLASSES_DIR>%;\012
-SJT1%<PROJECT_PATH>/src/Tester.java
+SJT0%<PROJECT_PATH>\\src\\Tester.java
 SXU0
 SOU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 SyU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<PYTHON_PATH>%;\012PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning\012GCC_COLORS=
@@ -15,23 +15,12 @@ s#j0
 s#l0
 s#m0src
 s#n0classes
-
-!254;g
-%\011src%sTester.java
-%\011src%sAssignDisplay.java
-
+!225;g
 %\011src%sReadIn.java
 %\011src%sCommonFile.java
-
-%\011src%sCommonGUI.java
-%\011src%sErrorPanel.java
-%\011src%sTabbedPane.java
-%\011src%sAddAssgtPanel.java
-!254;f
 %\011src%sTester.java
-%\011src%sAssignDisplay.java
-%\011src%sReadIn.java
-
+%\011src%sCommonGUI.java
+%\011src%sAddAssgtPanel.java
 %\011src%sAssignment.java
 %\011src%sMyFrame.java
 %\011src%sTabbedPane.java
@@ -45,7 +34,6 @@ s#n0classes
 %\011src%sAssignment.java
 %\011src%sMyFrame.java
 %\011src%sTabbedPane.java
-%\011src%sAddAssgtPanel.java
+%\011src%sErrorPanel.java
 !29;m
 RunSelect	APPLICATION:Tester
-
