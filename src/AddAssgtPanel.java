@@ -1,3 +1,7 @@
+//Creates the Panel that allows you to add new assignments
+
+
+
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -17,6 +21,7 @@ public class AddAssgtPanel extends JPanel {
 
    private JTextField nameAnswer;
    private JTextField classNumAnswer;
+   private JPanel dueDate;
    private JTextField dueDateAnswer_MM;
    private JTextField dueDateAnswer_DD;
    private JTextField dueDateAnswer_YY;
@@ -26,7 +31,7 @@ public class AddAssgtPanel extends JPanel {
    public AddAssgtPanel() {
       setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
       setBackground(Color.BLACK);
-    //JPanel.setTitle("Cadence's Personal Planner");
+      
    
       createName();
       createClassNum();
@@ -44,7 +49,6 @@ public class AddAssgtPanel extends JPanel {
       nameAnswer = new JTextField(12);
       setupComponents(nameLabel);
       setupComponents(nameAnswer);
-      nameAnswer.setText("THIS IS THE TEXT FIELD");
       add(nameLabel);
       add(nameAnswer);
       add(Box.createRigidArea(new Dimension(0, 25)));
@@ -61,10 +65,11 @@ public class AddAssgtPanel extends JPanel {
       add(Box.createRigidArea(new Dimension(0, 25)));
    }
    
-      private void createDueDate() {
+   private void createDueDate() {
     //dueDate
       JLabel dueDateLabel = new JLabel("Date Due: ");
-      //how 
+      dueDate = new JPanel();
+      dueDate.setLayout(new BoxLayout(dueDate, BoxLayout.X_AXIS));
       JLabel dueDateLabel_MM = new JLabel("Month");   //Month due
       dueDateAnswer_MM = new JTextField(2);
       JLabel dueDateLabel_DD = new JLabel("Day");     //Day due
@@ -79,12 +84,15 @@ public class AddAssgtPanel extends JPanel {
       setupComponents(dueDateLabel_YY);
       setupComponents(dueDateAnswer_YY);
       add(dueDateLabel);
-      add(dueDateAnswer_MM);
-      add(dueDateAnswer_MM);
-      add(dueDateLabel_DD);
-      add(dueDateAnswer_DD);
-      add(dueDateLabel_YY);
-      add(dueDateAnswer_YY);
+      dueDate.add(dueDateAnswer_MM);
+      dueDate.add(dueDateAnswer_MM);
+      add(Box.createRigidArea(new Dimension(10, 0)));
+      dueDate.add(dueDateLabel_DD);
+      dueDate.add(dueDateAnswer_DD);
+      add(Box.createRigidArea(new Dimension(10, 0)));
+      dueDate.add(dueDateLabel_YY);
+      dueDate.add(dueDateAnswer_YY);
+      add(dueDate);
       add(Box.createRigidArea(new Dimension(0, 25)));
    }
 

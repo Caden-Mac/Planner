@@ -15,29 +15,36 @@ import javax.swing.*;
 
 public class TabbedPane extends JTabbedPane {  
 
+   private JPanel mainPanel;
+
    TabbedPane(){  
-      //How do I change the color of the white box indicating a tab is selected
+      setSize(400,250);
+         //How do I change the color of the white box indicating a tab is selected
       setBackground(Color.CYAN);
+      //setTitle("Cadence's Personal Planner");
+      //setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
       
       JTextArea ta = new JTextArea(400,400);  
       
       
       JPanel p1 = new JPanel();  
-      p1.add(ta); 
+         mainPanel = new JPanel();
+         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
+         mainPanel.add(new AddAssgtPanel()); 
+         mainPanel.add(new JSeparator(SwingConstants.VERTICAL));
+         mainPanel.add(new AssignDisplay());
+      p1.add(mainPanel);
       
       JPanel p2 = new JPanel(); 
-      p2.add(new AddAssgtPanel());
+         p2.add(ta);
       
       JPanel p3 = new JPanel();
       
-      JPanel p4 = new JPanel();  
       
-      
-      setBounds(50,50,250,300);  
+        
       add(" Main ",p1);  
-      add(" Add ",p2);  
-      add("Schedule",p3); 
-      add("Settings",p4);
+      add("Schedule",p2);  
+      add("Settings",p3); 
       
    }  
 }

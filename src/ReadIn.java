@@ -10,29 +10,30 @@ import java.io.FileNotFoundException;
 
 
 public class ReadIn {
+   public static final String FOLDER = "../resources/";
    public static final String DEFAULT_FILE = "AssignmentList_INFO.csv";
 
 // ADD A FIELD FOR THE FILENAME
-   private String filename;
-   private Assignment[] assign_Info;
+    private String filename;
+    private Assignment[] assign_Info;
 
 //constructors
    public ReadIn() {
-      this (DEFAULT_FILE);
+      this (FOLDER + DEFAULT_FILE);
    }
 
    public ReadIn(String filename) {
    // SET THE FILENAME field value here
-   
-      this.filename = filename;
-      int count = countLines(); 
+
+   this.filename = filename;
+   int count = countLines(); 
    
             // CALL COUNT LINES HERE ... so you have count to create the array!
             // STORE THE COUNT (it can be a local variable)
      
      //Array
       assign_Info = new Assignment[count];
-   
+
    //Read & Write the file
       readFile();
       
@@ -45,8 +46,8 @@ public class ReadIn {
       try {
          scanner = new Scanner(file);
       } catch(FileNotFoundException e) {
-         System.out.println("Did not find file: " + filename);
-         System.exit(-1);
+        System.out.println("Did not find file: " + filename);
+        System.exit(-1);
       }
    
       return scanner;
@@ -66,26 +67,26 @@ public class ReadIn {
       return count;
    }
    
-   public void setFilename(String filename) {
+      public void setFilename(String filename) {
       this.filename = DEFAULT_FILE;
    }
 
 
    private void readFile() {
    // PUT THE FIELDS here as local variables set to null
-      String name = null;
-      int classNum = 0;
-      String dueDate_MM = null;
-      String dueDate_DD = null;
-      String dueDate_YY = null;
-      String notes = null;
-      boolean complete = false;
+   String name = null;
+   int classNum = 0;
+   String dueDate_MM = null;
+   String dueDate_DD = null;
+   String dueDate_YY = null;
+   String notes = null;
+   boolean complete = false;
    
    //Open the file
       Scanner file = openFile();
       int count = 0;
      
-   
+
       int assignNo = 0;
       
       while (file.hasNext()) {
@@ -109,19 +110,19 @@ public class ReadIn {
          Assignment assignment = new Assignment(name, classNum, dueDate_MM, dueDate_DD, dueDate_YY, notes, complete);// create the assignment here
          assign_Info[assignNo] = assignment; // put assignment into array here
          assignNo++;                        // increment the arrayIndex
-      //        System.out.println(line);
-      }
+  //        System.out.println(line);
+       }
          //Close the file
       file.close();
-   
+
    }
    
-   public void printAll() {
-      for (int i = 0; i < assign_Info.length; i++) {
-         System.out.println(assign_Info[i]);
+         public void printAll() {
+         for (int i = 0; i < assign_Info.length; i++) {
+            System.out.println(assign_Info[i]);
+         }
+         System.out.println("Done");
       }
-      System.out.println("Done");
-   }
       
       
 }
@@ -136,9 +137,8 @@ class Tester2 {
       test.printAll();
       //new ReadIn("this is my actual file.csv");
       
-   
+
    
    }
 
 }
-
