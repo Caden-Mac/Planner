@@ -39,8 +39,7 @@ public class TabbedPane extends JTabbedPane {
       p1.add(mainPanel);
       
       JPanel p2 = new JPanel(); 
-
-         p2.add(ta);
+      p2.add(new DateAndTime());
       
       JPanel p3 = new JPanel();
 

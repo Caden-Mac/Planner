@@ -21,7 +21,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 
-public class ClassNumToName extends JPanel {
+public class TimeToClassNum extends JPanel {
 
    //private JTextField;
    private JTextField Period1;
@@ -34,7 +34,7 @@ public class ClassNumToName extends JPanel {
    private JTextField Period8;
 
 
-   public ClassNumToName() {
+   public TimeToClassNum() {
       setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
       setBackground(Color.WHITE);
 

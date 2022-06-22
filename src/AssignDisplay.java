@@ -15,12 +15,21 @@ import java.awt.Dimension;
 import java.awt.event.*; 
 import javax.swing.*;  
 
+import javax.swing.JFrame;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import java.time.LocalDate;
 import javax.swing.JCheckBox;
+import javax.swing.table.DefaultTableModel;
 
 
 
-public class AssignDisplay extends JPanel {
+public class AssignDisplay extends JScrollPane {
 
+   JTabel table;
+   public table 
+   
+   
    private JPanel mainPanel;
    private String FONT;
    // private JCheckbox complete;
@@ -37,7 +46,7 @@ public class AssignDisplay extends JPanel {
    }
    
    private void createText() {
-      JLabel testing = new JLabel("test");
+      JLabel testing = new JLabel("Name: Date");
       add(testing);
    }
    
