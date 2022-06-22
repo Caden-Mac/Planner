@@ -65,7 +65,18 @@ public DateAndTime() {
       nameTimeLabel = new JLabel("Time: ");
       nameTimeInfo = new JLabel(" "
          			+ gcal.get(Calendar.HOUR) + ":"
-         			+ gcal.get(Calendar.MINUTE) + " "
+         			+ gcal.get(Calendar.MINUTE) + " 
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  "
          			+ amPm[gcal.get(Calendar.AM_PM)] + "\n");
       add(nameTimeLabel);
       add(nameTimeInfo);

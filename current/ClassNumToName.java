@@ -42,7 +42,7 @@ public int getClassNum() {
 public class ifStatements {
    
    if (classNum = 1) { 
-         JLabel cN1 = new JLabel("Name: ");
+         
    } else if (classNum = 2) {      
          System.out.println("Good Afternoon");
    } else if (classNum = 3) {     

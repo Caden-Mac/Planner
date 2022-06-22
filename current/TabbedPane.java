@@ -15,7 +15,9 @@ import java.awt.Font;
 
 public class TabbedPane extends JTabbedPane {  
 
-   private JPanel mainPanel;
+   private JPanel SetupPanel1;
+   private JPanel SetupPanel2;
+   private JPanel SetupPanel3;
 
    TabbedPane(){  
    
@@ -31,15 +33,26 @@ public class TabbedPane extends JTabbedPane {
       
       
       JPanel p1 = new JPanel();  
-         mainPanel = new JPanel();
-         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.X_AXIS));
-         mainPanel.add(new AddAssgtPanel()); 
-         mainPanel.add(new JSeparator(SwingConstants.VERTICAL));
-         mainPanel.add(new AssignDisplay());
-      p1.add(mainPanel);
+         SetupPanel1 = new JPanel();
+         SetupPanel1.setLayout(new BoxLayout(SetupPanel1, BoxLayout.X_AXIS));
+         SetupPanel1.add(new AddAssgtPanel()); 
+         SetupPanel1.add(new JSeparator(SwingConstants.VERTICAL));
+         SetupPanel1.add(new AssignDisplay());
+      p1.add(SetupPanel1);
       
       JPanel p2 = new JPanel(); 
-      p2.add(new DateAndTime());
+         SetupPanel2 = new JPanel();
+         SetupPanel2.setLayout(new BoxLayout(SetupPanel2, BoxLayout.X_AXIS));
+         SetupPanel2.add(new PeriodNames()); 
+         SetupPanel2.add(new JSeparator(SwingConstants.VERTICAL));
+            SetupPanel3 = new JPanel();
+            SetupPanel3.setLayout(new BoxLayout(SetupPanel3, BoxLayout.Y_AXIS));
+            SetupPanel3.add(new DateAndTime()); 
+            SetupPanel3.add(new JSeparator(SwingConstants.HORIZONTAL));
+            SetupPanel3.add(new DateAndTime()); 
+         SetupPanel2.add(SetupPanel3);
+      p2.add(SetupPanel2);
+      
       
       JPanel p3 = new JPanel();
 

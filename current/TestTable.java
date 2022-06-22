@@ -15,7 +15,7 @@ public class TestTable extends JScrollPane {
                                                           {7, "write paragraph on civil war battle", "rough draft", LocalDate.ofEpochDay(14352), Boolean.valueOf(false)}
                                                           };
                                                         
-   private static String[] colNames = new String[] {"Class", "Assignment", "Notes", "Date Due", "Complete"};
+   private static String[] colNames = new String[] {"Assignment Name", "Period", "Due Date", "Notes", "Complete"};
                                                         
    public TestTable() {
       JTable table = new JTable(myTable, colNames); // rows, cols
