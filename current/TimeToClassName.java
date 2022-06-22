@@ -53,16 +53,18 @@ public class Greeting {
    String time = (hour + ":" + min);
    
    
-   if (hour < 12) { 
-      System.out.println("Good Morning");
-   } else if (hour < 17) {       //17 is 5 pm
-         System.out.println("Good Afternoon");
-   } else {
-      System.out.println("Good Evening");
-   }
+//    if (hour < 12) { 
+//       System.out.println("Good Morning");
+//    } else if (hour < 17) {       //17 is 5 pm
+//          System.out.println("Good Afternoon");
+//    } else {
+//       System.out.println("Good Evening");
+//    }
    
    
-   System.out.print(time);
+  // System.out.print(time);
 
+
+}
 
 }

@@ -39,30 +39,29 @@ public int getClassNum() {
       return classNum;
    }
 
-public class ifStatements {
+// public class ifStatements {
+//    
+//    if (classNum = 1) { 
+//          JLabel
+//    } else if (classNum = 2) {      
+//          System.out.println("Good Afternoon");
+//    } else if (classNum = 3) {     
+//          System.out.println("Good Afternoon");
+//    } else if (classNum = 4) {      
+//          System.out.println("Good Afternoon");
+//    } else if (classNum = 5) {      
+//          System.out.println("Good Afternoon");
+//    } else if (classNum = 6) {      
+//          System.out.println("Good Afternoon");
+//    } else if (classNum = 7) {      
+//          System.out.println("Good Afternoon");
+//    } else if (classNum = 8) {      
+//          System.out.println("Good Afternoon");
+//    } else {
+//       System.out.println("Error");
+//    }
    
-   if (classNum = 1) { 
-         System.out.println("Good Afternoon");
-   } else if (classNum = 2) {      
-         System.out.println("Good Afternoon");
-   } else if (classNum = 3) {     
-         System.out.println("Good Afternoon");
-   } else if (classNum = 4) {      
-         System.out.println("Good Afternoon");
-   } else if (classNum = 5) {      
-         System.out.println("Good Afternoon");
-   } else if (classNum = 6) {      
-         System.out.println("Good Afternoon");
-   } else if (classNum = 7) {      
-         System.out.println("Good Afternoon");
-   } else if (classNum = 8) {      
-         System.out.println("Good Afternoon");
-   } else {
-      System.out.println("Error");
-   }
    
-   
-   System.out.print(time);
 
 
 }
