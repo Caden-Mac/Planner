@@ -15,11 +15,6 @@ import java.awt.Dimension;
 import java.awt.event.*; 
 import javax.swing.*;  
 
-import java.util.Locale;
-import java.util.TimeZone;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-
 
 public class ClassNumToName extends JPanel {
 
@@ -41,24 +36,29 @@ public class ClassNumToName extends JPanel {
    }
 
 public int getClassNum() {
-      return this.classNum;
+      return classNum;
    }
 
-public class Greeting {
-
-   GregorianCalendar cal = new GregorianCalendar();
+public class ifStatements {
    
-   int hour = cal.get(Calendar.HOUR);
-   int min = cal.get(Calendar.MINUTE);
-   String time = (hour + ":" + min);
-   
-   
-   if (hour < 12) { 
-      System.out.println("Good Morning");
-   } else if (hour < 17) {       //17 is 5 pm
+   if (classNum = 1) { 
+         JLabel cN1 = new JLabel("Name: ");
+   } else if (classNum = 2) {      
+         System.out.println("Good Afternoon");
+   } else if (classNum = 3) {     
+         System.out.println("Good Afternoon");
+   } else if (classNum = 4) {      
+         System.out.println("Good Afternoon");
+   } else if (classNum = 5) {      
+         System.out.println("Good Afternoon");
+   } else if (classNum = 6) {      
+         System.out.println("Good Afternoon");
+   } else if (classNum = 7) {      
+         System.out.println("Good Afternoon");
+   } else if (classNum = 8) {      
          System.out.println("Good Afternoon");
    } else {
-      System.out.println("Good Evening");
+      System.out.println("Error");
    }
    
    

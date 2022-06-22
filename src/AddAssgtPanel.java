@@ -29,7 +29,6 @@ public class AddAssgtPanel extends JPanel {
    private JTextField dueDateAnswer_MM;
    private JTextField dueDateAnswer_DD;
    private JTextField dueDateAnswer_YY;
-
    private JTextArea notesAnswer;
 
 
@@ -145,8 +144,6 @@ public class AddAssgtPanel extends JPanel {
 
 
    public void setupComponents(JComponent component) {
-   
-
       component.setOpaque(true);
       component.setForeground(Color.BLUE);
       component.setBackground(Color.LIGHT_GRAY);   
