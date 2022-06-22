@@ -62,7 +62,7 @@ public class Assignment {
 
 // toString
    public String toString() {
-      return name + ", " + classNum + ", " + dueDate_MM + ", " + dueDate_DD + ", " + dueDate_YY + ", " + notes + ", " + complete;
+      return name + ", " + classNum + ", " + dueDate_MM + "-" + dueDate_DD + "-" + dueDate_YY + ", " + notes + ", " + complete;
    }
  // toStrings are public
  // toStrings return a String

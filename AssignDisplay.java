@@ -26,7 +26,16 @@ import javax.swing.table.DefaultTableModel;
 
 public class AssignDisplay extends JScrollPane {
 
-   private static Object[][] adTable = assign_Info;
+   private static Object[][] myTable = assign_Info;
+   
+   private static String[] colNames = new String[] {"Assignment Name", "Period", "Due Date", "Notes", "Complete"};
+   
+   
+   
+   public AssignDisplay() {
+      JTable adTable = new JTable(myTable, colNames); // rows, cols
+      setViewportView(table);
+   }
 
 
 
