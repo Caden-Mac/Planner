@@ -26,8 +26,8 @@ import javax.swing.table.DefaultTableModel;
 
 public class AssignDisplay extends JScrollPane {
 
-   JTabel table;
-   public table 
+//    JTabel table;
+//    public table 
    
    
    private JPanel mainPanel;
