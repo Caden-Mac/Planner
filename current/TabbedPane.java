@@ -29,7 +29,7 @@ public class TabbedPane extends JTabbedPane {
       //setTitle("Cadence's Personal Planner");
       //setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
       
-      JTextArea ta = new JTextArea(400,400);  
+      JTextArea ta = new JTextArea();  
       
       
       JPanel p1 = new JPanel();  
@@ -40,6 +40,7 @@ public class TabbedPane extends JTabbedPane {
          SetupPanel1.add(new AssignDisplay());
       p1.add(SetupPanel1);
       
+      
       JPanel p2 = new JPanel(); 
          SetupPanel2 = new JPanel();
          SetupPanel2.setLayout(new BoxLayout(SetupPanel2, BoxLayout.X_AXIS));
@@ -49,7 +50,7 @@ public class TabbedPane extends JTabbedPane {
             SetupPanel3.setLayout(new BoxLayout(SetupPanel3, BoxLayout.Y_AXIS));
             SetupPanel3.add(new DateAndTime()); 
             SetupPanel3.add(new JSeparator(SwingConstants.HORIZONTAL));
-            SetupPanel3.add(new DateAndTime()); 
+            SetupPanel3.add(ta); 
          SetupPanel2.add(SetupPanel3);
       p2.add(SetupPanel2);
       
