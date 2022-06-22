@@ -125,6 +125,14 @@ public class ReadIn {
       }
       
       
+      public Object[][] toMatrix() {
+        Object[][] matrix = new Object[assign_Info.length][7];
+
+        for (int a = 0; a < assign_Info.length; a++) {
+          matrix[a] = assign_Info[a].toArray();        
+        }
+        return matrix;
+      }
 }
 
 class Tester2 { 
