@@ -59,12 +59,23 @@ public class FilePanel extends JScrollPane {
          String line = fileScanner.nextLine();
          String[] info = line.split(",");
          try {
-            LocalDate date = LocalDate.ofEpochDay(Long.parseLong(info[0]));
-            int minutes = info[2]== "" ? Integer.MIN_VALUE : Integer.parseInt(info[2]);
-            boolean done = Boolean.valueOf(info[3]);
+//             LocalDate date = LocalDate.ofEpochDay(Long.parseLong(info[0]));
+//             int minutes = info[2]== "" ? Integer.MIN_VALUE : Integer.parseInt(info[2]);
+//             boolean done = Boolean.valueOf(info[3]);
+//             double grade = info[4]=="" ? Double.MIN_VALUE : Double.parseDouble(info[4]);
+//             assignments[count++] = new Assignment(date, info[1], minutes, 
+//                                done, grade, info[5]);
+            String assignmentName = info[0];
+            LocalDate date = LocalDate.ofEpochDay(Long.parseLong(info[1]));
+            int classNumber = Integer.parseInt(info[2]);
+            String notes = info[3];
+            boolean done = Boolean.valueOf(info[4]);
             double grade = info[4]=="" ? Double.MIN_VALUE : Double.parseDouble(info[4]);
-            assignments[count++] = new Assignment(date, info[1], minutes, 
-                               done, grade, info[5]);
+            assignments[count++] = new Assignment(assignmentName, classNumber, 
+                                                   ""+date.getMonth(), ""+date.getDayOfMonth(), 
+                                                   ""+date.getYear(), 
+                                                   notes, done);
+                               
          } catch(NumberFormatException e) {
             System.out.print("Bad Number Format: ");
             System.out.println(e.getMessage());
@@ -73,7 +84,7 @@ public class FilePanel extends JScrollPane {
       }
       fileScanner.close();
    }
-
+/*
    private void writeTemperatures() {
    
       PrintWriter file = CommonFile.openFileForWriting(MY_FILE);
@@ -83,7 +94,7 @@ public class FilePanel extends JScrollPane {
       }
       file.close(); 
    }
-
+*/
    private JPanel createPanel() {
       JPanel panel = new JPanel();
       panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
