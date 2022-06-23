@@ -77,7 +77,7 @@ public class FilePanel extends JScrollPane {
    private void writeTemperatures() {
    
       PrintWriter file = CommonFile.openFileForWriting(MY_FILE);
-      file.println("Date,Subject,Minutes,Complete,Grade,Comments,");
+      file.println("Assignment Name", "Period", "Due Date", "Notes", "Complete");
       for (Assignment assignment : assignments) {
          file.println(assignment);
       }

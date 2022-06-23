@@ -142,10 +142,11 @@ public int getClassNum() {
       return classNum;
    }
 
-public class ifStatements {
+public void ifStatements() {
    
    if (classNum = 1) { 
-         JLabel p1Label
+         System.out.println("Good Afternoon");
+         //JLabel p1Label
    } else if (classNum = 2) {      
          System.out.println("Good Afternoon");
    } else if (classNum = 3) {     
@@ -166,5 +167,7 @@ public class ifStatements {
    
    
 
+
+}
 
 }

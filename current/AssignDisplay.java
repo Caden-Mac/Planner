@@ -33,8 +33,10 @@ public class AssignDisplay extends JScrollPane {
    
    
    public AssignDisplay() {
+      ReadIn reader = new ReadIn();
+      myTable = reader.toMatrix();
       JTable adTable = new JTable(myTable, colNames); // rows, cols
-      setViewportView(table);
+      setViewportView(adTable);
    }
 
 

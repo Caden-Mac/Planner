@@ -34,17 +34,17 @@ public class TabbedPane extends JTabbedPane {
       
       JPanel p1 = new JPanel();  
          SetupPanel1 = new JPanel();
-         SetupPanel1.setLayout(new BoxLayout(SetupPanel1, BoxLayout.X_AXIS));
-         SetupPanel1.add(new AddAssgtPanel()); 
-         SetupPanel1.add(new JSeparator(SwingConstants.VERTICAL));
-         SetupPanel1.add(new AssignDisplay());
+          SetupPanel1.setLayout(new BoxLayout(SetupPanel1, BoxLayout.X_AXIS));
+          SetupPanel1.add(new AddAssgtPanel()); 
+          SetupPanel1.add(new JSeparator(SwingConstants.VERTICAL));
+          SetupPanel1.add(new AssignDisplay());
       p1.add(SetupPanel1);
       
       
       JPanel p2 = new JPanel(); 
-         SetupPanel2 = new JPanel();
+         SetupPanel2 = new ClassPanel();
          SetupPanel2.setLayout(new BoxLayout(SetupPanel2, BoxLayout.X_AXIS));
-         SetupPanel2.add(new PeriodNames()); 
+         SetupPanel2.add(new ClassPanel()); 
          SetupPanel2.add(new JSeparator(SwingConstants.VERTICAL));
             SetupPanel3 = new JPanel();
             SetupPanel3.setLayout(new BoxLayout(SetupPanel3, BoxLayout.Y_AXIS));

@@ -13,11 +13,11 @@ s#i0
 s#k0
 s#j0
 s#l0
-!497;g
+!462;g
 %\011current%sErrorPanel.java
 %\011current%sTestTable.java
+%\011current%sClassPanel.java
 %\011current%sFilePanel.java
-%\011current%sClassNumToName.java
 %\011current%sMyFrame.java
 %\011current%sAddAssgtPanel.java
 %\011current%sp2.java
@@ -29,13 +29,12 @@ s#l0
 %\011current%sDateAndTime.java
 %\011current%sTester.java
 %\011current%sReadIn.java
-%\011current%sSettingsGUI.java
 %\011current%sAssignment.java
-!497;f
+!462;f
 %\011current%sErrorPanel.java
 %\011current%sTestTable.java
+%\011current%sClassPanel.java
 %\011current%sFilePanel.java
-%\011current%sClassNumToName.java
 %\011current%sMyFrame.java
 %\011current%sAddAssgtPanel.java
 %\011current%sp2.java
@@ -47,5 +46,4 @@ s#l0
 %\011current%sDateAndTime.java
 %\011current%sTester.java
 %\011current%sReadIn.java
-%\011current%sSettingsGUI.java
 %\011current%sAssignment.java

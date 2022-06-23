@@ -1,3 +1,9 @@
+//Combo Box w/ Color Themes
+   //Light, Dark, Rainbow
+   
+//Combo Box w/ Font Sizes:
+   //Small, Medium, and Large
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
@@ -15,7 +21,7 @@ import java.io.IOException;
 
 public class SettingsGUI extends JPanel {
 
-   private Font font;
+
    
    
    
@@ -24,7 +30,7 @@ public class SettingsGUI extends JPanel {
    
    
    
-   
+   private void createCustomize
 
 
 
